@@ -8,7 +8,15 @@
 */
 
 function uniq(arr) {
-    // Напишите код здесь
+    let uniqArr = [];
+    
+    for (let i = 0; i < arr.length; i++) {
+        if ( i == arr.lastIndexOf(arr[i])) {
+            uniqArr.push(arr[i]);
+        }
+    }
+
+    return uniqArr;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
