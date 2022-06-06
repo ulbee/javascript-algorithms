@@ -14,11 +14,25 @@
 */
 
 function palindrome(str) {
-    // Напишите код здесь
+    const length = str.length;
+
+    if (str === "") {
+        return true;
+    }
+
+    for (let i = 0; i <= length / 2; i++) {
+        if (str[i].toLowerCase() !== str[length - 1 - i].toLowerCase()) {
+            return false;
+            break;
+        }         
+    }
+
+    return true;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
+console.log(palindrome('')); // должно быть true
 console.log(palindrome('топот')); // должно быть true
 console.log(palindrome('Saippuakivikauppias')); // true
 console.log(palindrome('привет')); // false
@@ -30,3 +44,22 @@ console.log(palindrome('привет')); // false
  * palindrome('О, лета тело!'); // true
  * 
 */
+
+function fullPalindrome(str) {
+    const regexp = /[^a-zа-яё]/gi;
+    const newStr = str.replace(regexp, '');
+    const length = newStr.length;
+
+    if (newStr === "") {
+        return true;
+    }
+
+    for (let i = 0; i <= length / 2; i++) {
+        if (newStr[i].toLowerCase() !== newStr[length - 1 - i].toLowerCase()) {
+            return false;
+            break;
+        }         
+    }
+
+    return true;
+}
