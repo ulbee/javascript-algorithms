@@ -23,7 +23,6 @@ function palindrome(str) {
     for (let i = 0; i <= length / 2; i++) {
         if (str[i].toLowerCase() !== str[length - 1 - i].toLowerCase()) {
             return false;
-            break;
         }         
     }
 
@@ -57,7 +56,6 @@ function fullPalindrome(str) {
     for (let i = 0; i <= length / 2; i++) {
         if (newStr[i].toLowerCase() !== newStr[length - 1 - i].toLowerCase()) {
             return false;
-            break;
         }         
     }
 
