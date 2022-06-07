@@ -8,7 +8,17 @@
 */
 
 function intersection(arr1, arr2) {
-    // Напишите код здесь
+    let resArr = [];
+    let length = arr1.length;
+
+    for (let i = 0; i < length; i++) {
+        if (arr2.indexOf(arr1[i]) != -1 && resArr.indexOf(arr1[i]) == -1) {
+            resArr.push(arr1[i]);
+        }
+    }
+
+    console.log(resArr);
+    return resArr;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
