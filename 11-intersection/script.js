@@ -17,7 +17,6 @@ function intersection(arr1, arr2) {
         }
     }
 
-    console.log(resArr);
     return resArr;
 }
 
