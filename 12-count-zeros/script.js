@@ -6,8 +6,18 @@
  *
 */
 
+// Придумала пока только решение обращение с n как со строкой. Как с числом показалось слишком сложно
 function countZeros(n) {
-    // Напишите код здесь
+    let zeros = 0;
+
+    for (let i = 1; i <= n; i++) {
+        let str = String(i);
+        let zerosStr = str.replace(/[^0]/g, '');
+
+        zeros += zerosStr.length;
+    }
+
+    return zeros;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
