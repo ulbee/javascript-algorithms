@@ -13,7 +13,6 @@ function findVowels(str) {
     let vowels = 0;
 
     for (let i = 0; i < str.length; i++) {
-        // Написала через регулярку, потому что показалось это короче, чем писать множество сравнений с гласными
         if (/[аяоёуюыиэе]/i.test(str[i])) {
             vowels++;
         }
